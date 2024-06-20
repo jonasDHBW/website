@@ -51,7 +51,6 @@ footer {
 }
 
 .container {
-    max-width: 1200px; /* Breite der Container für die Hauptseite anpassen */
     margin: 0 auto;
     padding: 20px;
     background-color: #fff;
@@ -84,6 +83,10 @@ button {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    position: absolute;
+    bottom: 10px; /* Abstand vom unteren Rand */
+    left: 50%; /* Zentriert horizontal */
+    transform: translateX(-50%); /* Korrektur für absolute Positionierung */
 }
 
 #featured-animal {
@@ -99,28 +102,34 @@ button {
     padding: 20px;
     margin: 20px;
     border-radius: 5px;
-    width: 300px; /* Breite der Profile für die Hauptseite anpassen */
+    width: 300px;
+    height: 850px; /* Breite der Profile für die Hauptseite anpassen */
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* Für absolute Positionierung des Buttons */
+    padding-bottom: 50px; /* Platz für den Button */
 }
 
 .animal-profile img {
     width: 100%;
+    max-width: 200px; /* Maximale Breite der Bilder */
+    height: auto;
     border-radius: 5px;
     margin-bottom: 10px;
 }
 
 @media screen and (min-width: 710px) {
     body {
-    font-size: 25px; /* Größere Schriftgröße für größere Bildschirme */
-    }
-    }
-    
-@media screen and (min-width: 1024px) {
-    body {
-    font-size: 27px; /* Noch größere Schriftgröße für noch größere Bildschirme */
+        font-size: 25px; /* Größere Schriftgröße für größere Bildschirme */
     }
 }
+
+@media screen and (min-width: 1024px) {
+    body {
+        font-size: 27px; /* Noch größere Schriftgröße für noch größere Bildschirme */
+    }
+}
+
 /* Container nebeneinander anordnen */
 .animal-container {
     display: flex;
@@ -132,7 +141,7 @@ button {
     width: 200px; /* Breite der Tierprofile anpassen */
     padding: 20px;
     text-align: center;
-    background-color:rgb(146, 121, 11) ;
+    background-color: rgb(146, 121, 11);
     margin-bottom: 20px;
     transition: transform 0.3s ease; /* Übergangseffekt für den Hover-Effekt */
 }
@@ -146,4 +155,8 @@ button {
 .animal-profile:hover {
     transform: translateY(-5px); /* Verschieben nach oben beim Überfahren */
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Schatten hinzufügen */
+}
+
+.animal-profile p {
+    margin-top: 0; /* Keine zusätzliche Margin oben */
 }
