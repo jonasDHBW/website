@@ -136,3 +136,9 @@ footer {
   from {opacity: .4}
   to {opacity: 1}
 }
+
+.mySlides img {
+  max-width: 100%;
+  max-height: 500px; /* Hier kannst du die maximale Höhe nach Bedarf anpassen */
+  object-fit: contain; /* Damit das Bild innerhalb des Rahmens bleibt */
+}
