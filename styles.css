@@ -1,12 +1,14 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f8ff;
-    color: #333;
+    background-image: url("/images/wallpaper.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     text-align: center;
 }
 
 header {
-    background-color: green;
+    background-color: rgb(146, 121, 11);
     padding: 20px;
     color: white;
 }
@@ -16,7 +18,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    background-color: green;
+    background-color: rgb(146, 121, 11);
 }
 
 nav ul li {
@@ -31,7 +33,7 @@ nav ul li a {
 }
 
 nav ul li a:hover, nav ul li a.active {
-    background-color: green;
+    background-color: rgb(146, 121, 11);
 }
 
 main {
@@ -46,7 +48,7 @@ main {
 }
 
 .animal-profile {
-    background-color: green;
+    background-color: rgb(146, 121, 11);
     color: white;
     padding: 10px;
     margin: 10px;
@@ -61,7 +63,7 @@ main {
 }
 
 footer {
-    background-color: green;
+    background-color: rgb(146, 121, 11);
     padding: 10px;
     color: white;
 }
@@ -79,4 +81,10 @@ body {
         font-size: 27px; /* Noch größere Schriftgröße für noch größere Bildschirme */
     }
 }
-                            
+
+.animal-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
