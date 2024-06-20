@@ -71,12 +71,12 @@ body {
 }
 @media (min-width: 768px) {
     body {
-        font-size: 27px; /* Größere Schriftgröße für größere Bildschirme */
+        font-size: 25px; /* Größere Schriftgröße für größere Bildschirme */
     }
 }
 @media (min-width: 1024px) {
     body {
-        font-size: 29px; /* Noch größere Schriftgröße für noch größere Bildschirme */
+        font-size: 25px; /* Noch größere Schriftgröße für noch größere Bildschirme */
     }
 }
                             
