@@ -58,8 +58,14 @@ main {
 }
 
 .animal-profile img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 100%;
     border-radius: 5px;
+}
+
+.animal-profile img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 footer {
@@ -87,4 +93,45 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    text-align: center;
+}
+label {
+    display: block;
+    margin: 15px 0 5px;
+}
+input, textarea, select {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #218838;
 }
