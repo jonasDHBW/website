@@ -5,6 +5,10 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     text-align: center;
+    font-size: 25px; /* Basis-Schriftgröße */
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
 }
 
 header {
@@ -33,11 +37,77 @@ nav ul li a {
 }
 
 nav ul li a:hover, nav ul li a.active {
-    background-color: rgb(146, 121, 11);
+    background-color: rgb(120, 100, 10);
 }
 
 main {
     margin: 20px;
+}
+
+footer {
+    background-color: rgb(146, 121, 11);
+    padding: 10px;
+    color: white;
+}
+
+.container {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin: 15px 0 5px;
+}
+
+input, textarea, select {
+    width: 80%; /* Reduziert die Breite auf 80% */
+    max-width: 500px; /* Optional: maximale Breite */
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-left: auto; /* Zentriert das Element */
+    margin-right: auto; /* Zentriert das Element */
+    display: block; /* Zentriert das Element */
+}
+
+button {
+    width: 80%;
+    max-width: 500px; /* Optional: maximale Breite */
+    padding: 10px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: auto; /* Zentriert das Element */
+    margin-right: auto; /* Zentriert das Element */
+    display: block; /* Zentriert das Element */
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+@media screen and (min-width: 710px) {
+    body {
+        font-size: 25px; /* Größere Schriftgröße für größere Bildschirme */
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        font-size: 27px; /* Noch größere Schriftgröße für noch größere Bildschirme */
+    }
 }
 
 #featured-animal {
@@ -46,7 +116,7 @@ main {
     gap: 20px;
     flex-wrap: wrap;
 }
-
+    
 .animal-profile {
     background-color: rgb(146, 121, 11);
     color: white;
@@ -68,70 +138,9 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-footer {
-    background-color: rgb(146, 121, 11);
-    padding: 10px;
-    color: white;
-}
-
-body {
-    font-size: 25px; /* Basis-Schriftgröße */
-}
-@media screen and (min-width: 710px) {
-    body {
-        font-size: 25px; /* Größere Schriftgröße für größere Bildschirme */
-    }
-}
-@media screen and (min-width: 1024px) {
-    body {
-        font-size: 27px; /* Noch größere Schriftgröße für noch größere Bildschirme */
-    }
-}
-
 .animal-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    margin: 0;
-    padding: 20px;
-}
-.container {
-    max-width: 650px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-h1 {
-    text-align: center;
-}
-label {
-    display: block;
-    margin: 15px 0 5px;
-}
-input, textarea, select {
-    width: 100%;
-    padding: 5px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #28a745;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-}
-button:hover {
-    background-color: #218838;
 }
