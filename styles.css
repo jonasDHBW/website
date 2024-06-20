@@ -5,144 +5,145 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     text-align: center;
-    font-size: 25px; /* Basis-Schriftgröße */
+    font-size: 16px;
     background-color: #f4f4f9;
     margin: 0;
     padding: 20px;
 }
+
 header {
-background-color: rgb(146, 121, 11);
-padding: 20px;
-color: white;
+    background-color: rgb(146, 121, 11);
+    padding: 20px;
+    color: white;
 }
 
 nav ul {
-list-style-type: none;
-padding: 0;
-display: flex;
-justify-content: center;
-background-color: rgb(146, 121, 11);
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(146, 121, 11);
 }
 
 nav ul li {
-margin: 0 10px;
+    margin: 0 10px;
 }
 
 nav ul li a {
-color: white;
-text-decoration: none;
-padding: 10px 20px;
-display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
 }
 
-nav ul li a
-, nav ul li a.active {
-background-color: rgb(120, 100, 10);
+nav ul li a:hover, nav ul li a.active {
+    background-color: rgb(120, 100, 10);
 }
 
 main {
-margin: 20px;
+    margin: 20px;
 }
 
 footer {
-background-color: rgb(146, 121, 11);
-padding: 10px;
-color: white;
+    background-color: rgb(146, 121, 11);
+    padding: 10px;
+    color: white;
 }
 
 .container {
-max-width: 650px;
-margin: 0 auto;
-padding: 20px;
-background-color: #fff;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 1200px; /* Breite der Container für die Hauptseite anpassen */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-text-align: center;
+    text-align: center;
 }
 
 label {
-display: block;
-margin: 15px 0 5px;
+    display: block;
+    margin: 15px 0 5px;
 }
 
 input, textarea, select {
-width: 80%; /* Reduziert die Breite auf 80% /
-max-width: 500px; / Optional: maximale Breite /
-padding: 5px;
-margin-bottom: 10px;
-border: 1px solid #ddd;
-border-radius: 5px;
-margin-left: auto; / Zentriert das Element /
-margin-right: auto; / Zentriert das Element /
-display: block; / Zentriert das Element */
+    width: 100%; /* Volle Breite für Input-Felder */
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
 button {
-width: 80%;
-max-width: 500px; /* Optional: maximale Breite /
-padding: 10px;
-background-color: #28a745;
-border: none;
-border-radius: 5px;
-color: #fff;
-font-size: 16px;
-cursor: pointer;
-margin-left: auto; / Zentriert das Element /
-margin-right: auto; / Zentriert das Element /
-display: block; / Zentriert das Element */
-}
-
-button
-{
-background-color: #218838;
-}
-
-@media screen and (min-width: 710px) {
-body {
-font-size: 25px; /* Größere Schriftgröße für größere Bildschirme */
-}
-}
-
-@media screen and (min-width: 1024px) {
-body {
-font-size: 27px; /* Noch größere Schriftgröße für noch größere Bildschirme */
-}
+    padding: 10px 20px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 #featured-animal {
-display: flex;
-justify-content: center;
-gap: 20px;
-flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .animal-profile {
-background-color: rgb(146, 121, 11);
-color: white;
-padding: 10px;
-margin: 10px;
-border-radius: 5px;
-width: 200px;
-text-align: center;
+    background-color: rgb(146, 121, 11);
+    color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    width: 300px; /* Breite der Profile für die Hauptseite anpassen */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .animal-profile img {
-transition: transform 0.3s ease, box-shadow 0.3s ease;
-width: 100%;
-border-radius: 5px;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
-.animal-profile img
-{
-transform: scale(1.05);
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+@media screen and (min-width: 710px) {
+    body {
+    font-size: 25px; /* Größere Schriftgröße für größere Bildschirme */
+    }
+    }
+    
+@media screen and (min-width: 1024px) {
+    body {
+    font-size: 27px; /* Noch größere Schriftgröße für noch größere Bildschirme */
+    }
 }
-
+/* Container nebeneinander anordnen */
 .animal-container {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 20px;
+    display: flex;
+    justify-content: space-around; /* Abstand zwischen den Containern */
+    flex-wrap: wrap; /* Umfließen der Elemente bei Bedarf */
+}
+
+.animal-profile {
+    width: 200px; /* Breite der Tierprofile anpassen */
+    padding: 20px;
+    text-align: center;
+    background-color:rgb(146, 121, 11) ;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease; /* Übergangseffekt für den Hover-Effekt */
+}
+
+.animal-profile img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%; /* Optional: runde Ecken für die Bilder */
+}
+
+.animal-profile:hover {
+    transform: translateY(-5px); /* Verschieben nach oben beim Überfahren */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Schatten hinzufügen */
 }
