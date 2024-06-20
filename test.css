@@ -6,13 +6,16 @@
 
 .profile-image {
     position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Damit das Bild innerhalb der Begrenzungen bleibt */
+    width: 100px; /* Gewünschte Breite der Bilder */
+    height: 100px; /* Gewünschte Höhe der Bilder */
 }
 
 .profile-image img {
-    max-width: 100px;
-    height: auto;
+    width: 100%; /* Bild auf 100% der Größe des Containers skalieren */
+    height: auto; /* Automatische Höhe beibehalten */
     display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .profile-image:hover {
@@ -37,4 +40,4 @@
 
 .prev:hover, .next:hover {
     background-color: #ccc;
-}
+} 
