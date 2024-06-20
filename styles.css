@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background-color: #ff69b4;
+    background-color: green;
     padding: 20px;
     color: white;
 }
@@ -16,7 +16,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    background-color: #ff69b4;
+    background-color: green;
 }
 
 nav ul li {
@@ -31,7 +31,7 @@ nav ul li a {
 }
 
 nav ul li a:hover, nav ul li a.active {
-    background-color: #ff1493;
+    background-color: green;
 }
 
 main {
@@ -46,7 +46,7 @@ main {
 }
 
 .human-profile {
-    background-color: #ff69b4;
+    background-color: green;
     color: white;
     padding: 10px;
     margin: 10px;
@@ -61,7 +61,7 @@ main {
 }
 
 footer {
-    background-color: #ff69b4;
+    background-color: green;
     padding: 10px;
     color: white;
 }
