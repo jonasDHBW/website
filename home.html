@@ -8,7 +8,7 @@
         /* Inline-Stil für diese Demonstration */
         body {
             font-family: Arial, sans-serif;
-            background-image: url("/images/wallpaper.jpg");
+            background-image: url("/bilder/wallpaperflare.com_wallpaper.jpg");
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -62,6 +62,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             display: inline-block; /* Anzeige der Profile nebeneinander */
             vertical-align: top; /* Um sicherzustellen, dass sie oben ausgerichtet sind */
+            animation: slide-in 0.5s forwards;
         }
 
         .animal-profile img {
@@ -70,13 +71,76 @@
             margin-bottom: 10px;
         }
 
-        .slideshow-container {
-            display: inline-block; /* Container für Slides nebeneinander anordnen */
-            text-align: left; /* Slides linksbündig ausrichten */
+        @keyframes slide-in {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
         }
 
-        .mySlides {
-            display: none; /* Slides standardmäßig ausblenden */
+        @keyframes slide-out {
+            from {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+        }
+
+        .fade-out {
+            animation: slide-out 0.5s forwards;
+        }
+
+        .slideshow-container {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active, .dot:hover {
+            background-color: #717171;
         }
 
         @media screen and (min-width: 710px) {
@@ -99,7 +163,7 @@
     </header>
     <nav>
         <ul>
-            <li><a href="/home.html"class="active">Home</a></li>
+            <li><a href="/home.html" class="active">Home</a></li>
             <li><a href="/Tierehauptseite/hund.html">Hunde</a></li>
             <li><a href="/Tierehauptseite/katze.html">Katzen</a></li>
             <li><a href="/Tierehauptseite/kleintier.html">Kleintier</a></li>
@@ -118,7 +182,7 @@
         <h2 style="color: white;">Empfohlene Tiere</h2>
         <!-- Slideshow container -->
         <div class="slideshow-container">
-            <div class="mySlides fade">
+            <div class="mySlides">
                 <div class="animal-profile">
                     <img src="images/cat1.jpg" alt="Energetic Ella">
                     <h3>Energetic Ella</h3>
@@ -126,19 +190,19 @@
                 </div>
             </div>
 
-            <div class="mySlides fade">
+            <div class="mySlides">
                 <div class="animal-profile">
-                    <img src="images/cat2.jpg" alt="Energetic Ella">
-                    <h3>Energetic Ella</h3>
-                    <p>Voller Energie, liebt es zu spielen und braucht viel Bewegung.</p>
+                    <img src="images/cat2.jpg" alt="Curious Charlie">
+                    <h3>Curious Charlie</h3>
+                    <p>Neugierig und verspielt, immer auf der Suche nach einem Abenteuer.</p>
                 </div>
             </div>
 
-            <div class="mySlides fade">
+            <div class="mySlides">
                 <div class="animal-profile">
-                    <img src="images/cat3.jpg" alt="Energetic Ella">
-                    <h3>Energetic Ella</h3>
-                    <p>Voller Energie, liebt es zu spielen und braucht viel Bewegung.</p>
+                    <img src="images/cat3.jpg" alt="Lazy Leo">
+                    <h3>Lazy Leo</h3>
+                    <p>Entspannt und kuschelig, liebt es zu faulenzen.</p>
                 </div>
             </div>
         </div>
@@ -158,33 +222,32 @@
         <p>&copy; 2024 Adoptiere ein Tier</p>
     </footer>
     <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
+        let slideIndex = 0;
+        showSlides();
 
-        // Next/previous controls
         function plusSlides(n) {
           showSlides(slideIndex += n);
         }
 
-        // Thumbnail image controls
         function currentSlide(n) {
-          showSlides(slideIndex = n);
+          showSlides(slideIndex = n - 1);
         }
 
-        function showSlides(n) {
+        function showSlides() {
           let i;
           let slides = document.getElementsByClassName("mySlides");
           let dots = document.getElementsByClassName("dot");
-          if (n > slides.length) {slideIndex = 1}
-          if (n < 1) {slideIndex = slides.length}
           for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
           }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}
           for (i = 0; i < dots.length; i++) {
             dots[i].className = dots[i].className.replace(" active", "");
           }
           slides[slideIndex-1].style.display = "block";
           dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 4000); // Change image every 4 seconds
         }
     </script>
 </body>

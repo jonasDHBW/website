@@ -103,7 +103,7 @@ button {
     margin: 20px;
     border-radius: 5px;
     width: 300px;
-    height: 850px; /* Breite der Profile für die Hauptseite anpassen */
+    height: 900px; /* Breite der Profile für die Hauptseite anpassen */
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: relative; /* Für absolute Positionierung des Buttons */
