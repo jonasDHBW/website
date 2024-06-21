@@ -68,7 +68,7 @@ footer {
     padding: 20px;
     margin: 20px;
     border-radius: 5px;
-    width: 100%;
+    width: 95%;
     height: 700px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -139,5 +139,19 @@ footer {
     body {
         font-size: 27px;
     }
+}
+
+.more-button {
+    background-color: green; /* Hintergrundfarbe */
+    color: white; /* Textfarbe */
+    padding: 15px 32px; /* Innenabstand */
+    font-size: 16px; /* Schriftgröße */
+    border: none; /* Rahmen entfernen */
+    border-radius: 5px; /* Abgerundete Ecken */
+    cursor: pointer; /* Mauszeiger bei Hover */
+}
+
+.more-button:hover {
+    background-color: darkgreen; /* Hintergrundfarbe bei Hover */
 }
 

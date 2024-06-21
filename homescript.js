@@ -19,7 +19,7 @@ let slideIndex = 0;
         }
 
         function showSlides() {
-            slidesWrapper.style.transform = `translateX(-${slideIndex * 33.33}%)`;
+            slidesWrapper.style.transform = `translateX(-${slideIndex * 34.33}%)`;
             dots.forEach((dot, index) => {
                 dot.className = dot.className.replace(" active", "");
                 if (index === slideIndex) {
