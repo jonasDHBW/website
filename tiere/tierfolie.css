@@ -69,11 +69,11 @@ footer {
   position: absolute;
   top: 50%;
   width: auto;
-  margin-top: -22px;
-  padding: 16px;
+  margin-top: -30px; /* Anpassung für die vertikale Zentrierung */
+  padding: 20px; /* Erhöhte Padding für größere Buttons */
   color: white;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 40px; /* Größere Schriftgröße */
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
@@ -81,13 +81,16 @@ footer {
 
 /* Position the "next button" to the right */
 .next {
+  color: black;
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+/* Position the "prev button" to the left */
+.prev {
+  color: black;
+  left: 0;
+  border-radius: 0 3px 3px 0;
 }
 
 /* Caption text */

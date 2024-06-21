@@ -26,4 +26,11 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
-    
+
+// Funktion, um alle 5 Sekunden zum nächsten Slide zu wechseln
+function autoNextSlide() {
+  plusSlides(1); // Gehe zum nächsten Slide
+}
+
+// Starte das automatische Wechseln alle 8 Sekunden
+setInterval(autoNextSlide, 8000); // 8000 Millisekunden = 8 Sekunden
