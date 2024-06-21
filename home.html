@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adoptiere ein Tier - Home</title>
     <style>
-        /* Inline-Stil für diese Demonstration */
         body {
             font-family: Arial, sans-serif;
-            background-image: url("/bilder/wallpaperflare.com_wallpaper.jpg");
+            background-image: url("/images/wallpaper.jpg");
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -50,58 +49,41 @@
             color: white;
         }
 
+        .slideshow-container {
+            display: flex;
+            overflow: hidden;
+            max-width: 1500px;
+            margin: auto;
+            position: relative;
+        }
+
+        .slides-wrapper {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 300%; /* Adjust based on the number of slides visible at a time */
+        }
+
+        .mySlides {
+            min-width: 33.33%; /* Show three slides at a time */
+            box-sizing: border-box;
+            padding: 20px;
+        }
+
         .animal-profile {
             background-color: rgb(146, 121, 11);
             color: white;
             padding: 20px;
             margin: 20px;
             border-radius: 5px;
-            width: 300px;
-            height: 700px; /* Breite der Profile für die Hauptseite anpassen */
+            width: 100%;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            display: inline-block; /* Anzeige der Profile nebeneinander */
-            vertical-align: top; /* Um sicherzustellen, dass sie oben ausgerichtet sind */
-            animation: slide-in 0.5s forwards;
         }
 
         .animal-profile img {
             width: 100%;
             border-radius: 5px;
             margin-bottom: 10px;
-        }
-
-        @keyframes slide-in {
-            from {
-                transform: translateX(100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-
-        @keyframes slide-out {
-            from {
-                transform: translateX(0);
-                opacity: 1;
-            }
-            to {
-                transform: translateX(-100%);
-                opacity: 0;
-            }
-        }
-
-        .fade-out {
-            animation: slide-out 0.5s forwards;
-        }
-
-        .slideshow-container {
-            position: relative;
-            width: 100%;
-            max-width: 1200px;
-            margin: auto;
         }
 
         .prev, .next {
@@ -117,6 +99,7 @@
             transition: 0.6s ease;
             border-radius: 0 3px 3px 0;
             user-select: none;
+            background-color: rgba(0,0,0,0.5);
         }
 
         .next {
@@ -126,6 +109,11 @@
 
         .prev:hover, .next:hover {
             background-color: rgba(0,0,0,0.8);
+        }
+
+        .dot-container {
+            text-align: center;
+            padding: 20px;
         }
 
         .dot {
@@ -145,13 +133,13 @@
 
         @media screen and (min-width: 710px) {
             body {
-                font-size: 25px; /* Größere Schriftgröße für größere Bildschirme */
+                font-size: 25px;
             }
         }
 
         @media screen and (min-width: 1024px) {
             body {
-                font-size: 27px; /* Noch größere Schriftgröße für noch größere Bildschirme */
+                font-size: 27px;
             }
         }
     </style>
@@ -180,29 +168,54 @@
             <p style="color: white;">Auf dieser Website können Sie den perfekten tierischen Begleiter finden. Sehen Sie sich unsere Kategorien an und entdecken Sie die besten Tiere zur Adoption!</p>
         </section>
         <h2 style="color: white;">Empfohlene Tiere</h2>
-        <!-- Slideshow container -->
         <div class="slideshow-container">
-            <div class="mySlides">
-                <div class="animal-profile">
-                    <img src="images/cat1.jpg" alt="Energetic Ella">
-                    <h3>Energetic Ella</h3>
-                    <p>Voller Energie, liebt es zu spielen und braucht viel Bewegung.</p>
+            <div class="slides-wrapper">
+                <div class="mySlides">
+                    <div class="animal-profile">
+                        <img src="images/cat1.jpg" alt="Energetic Ella">
+                        <h3>Energetic Ella</h3>
+                        <p>Voller Energie, liebt es zu spielen und braucht viel Bewegung.</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="mySlides">
-                <div class="animal-profile">
-                    <img src="images/cat2.jpg" alt="Curious Charlie">
-                    <h3>Curious Charlie</h3>
-                    <p>Neugierig und verspielt, immer auf der Suche nach einem Abenteuer.</p>
+                <div class="mySlides">
+                    <div class="animal-profile">
+                        <img src="images/cat2.jpg" alt="Curious Charlie">
+                        <h3>Curious Charlie</h3>
+                        <p>Neugierig und verspielt, immer auf der Suche nach einem Abenteuer.</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="mySlides">
-                <div class="animal-profile">
-                    <img src="images/cat3.jpg" alt="Lazy Leo">
-                    <h3>Lazy Leo</h3>
-                    <p>Entspannt und kuschelig, liebt es zu faulenzen.</p>
+                <div class="mySlides">
+                    <div class="animal-profile">
+                        <img src="images/cat3.jpg" alt="Lazy Leo">
+                        <h3>Lazy Leo</h3>
+                        <p>Entspannt und kuschelig, liebt es zu faulenzen.</p>
+                    </div>
+                </div>
+
+                <div class="mySlides">
+                    <div class="animal-profile">
+                        <img src="images/cat4.jpg" alt="Playful Paws">
+                        <h3>Playful Paws</h3>
+                        <p>Liebt es zu spielen und ist sehr freundlich.</p>
+                    </div>
+                </div>
+
+                <div class="mySlides">
+                    <div class="animal-profile">
+                        <img src="images/cat5.jpg" alt="Sleepy Sam">
+                        <h3>Sleepy Sam</h3>
+                        <p>Ruhig und gelassen, perfekt für ein entspanntes Zuhause.</p>
+                    </div>
+                </div>
+
+                <div class="mySlides">
+                    <div class="animal-profile">
+                        <img src="images/cat6.jpg" alt="Friendly Fido">
+                        <h3>Friendly Fido</h3>
+                        <p>Sehr freundlich und liebt Gesellschaft.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -212,10 +225,13 @@
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
   
         <!-- The dots/circles -->
-        <div style="text-align:center">
+        <div class="dot-container">
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
         </div>
     </main>
     <footer>
@@ -223,32 +239,36 @@
     </footer>
     <script>
         let slideIndex = 0;
-        showSlides();
+        const slidesWrapper = document.querySelector('.slides-wrapper');
+        const dots = document.querySelectorAll('.dot');
+        const totalSlides = document.querySelectorAll('.mySlides').length;
 
         function plusSlides(n) {
-          showSlides(slideIndex += n);
+            slideIndex += n;
+            if (slideIndex > totalSlides - 3) {
+                slideIndex = 0;
+            } else if (slideIndex < 0) {
+                slideIndex = totalSlides - 3;
+            }
+            showSlides();
         }
 
         function currentSlide(n) {
-          showSlides(slideIndex = n - 1);
+            slideIndex = n - 1;
+            showSlides();
         }
 
         function showSlides() {
-          let i;
-          let slides = document.getElementsByClassName("mySlides");
-          let dots = document.getElementsByClassName("dot");
-          for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-          }
-          slideIndex++;
-          if (slideIndex > slides.length) {slideIndex = 1}
-          for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-          }
-          slides[slideIndex-1].style.display = "block";
-          dots[slideIndex-1].className += " active";
-          setTimeout(showSlides, 4000); // Change image every 4 seconds
+            slidesWrapper.style.transform = `translateX(-${slideIndex * 35.4}%)`;
+            dots.forEach((dot, index) => {
+                dot.className = dot.className.replace(" active", "");
+                if (index === slideIndex) {
+                    dot.className += " active";
+                }
+            });
         }
+
+        showSlides();
     </script>
 </body>
 </html>
