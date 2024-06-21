@@ -4,145 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adoptiere ein Tier - Home</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-image: url("/images/wallpaper.jpg");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            text-align: center;
-            font-size: 16px;
-            background-color: #f4f4f9;
-            margin: 0;
-            padding: 20px;
-        }
-
-        header {
-            background-color: rgb(146, 121, 11);
-            padding: 20px;
-            color: white;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            background-color: rgb(146, 121, 11);
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            display: block;
-        }
-
-        nav ul li a:hover, nav ul li a.active {
-            background-color: rgb(120, 100, 10);
-        }
-
-        footer {
-            background-color: rgb(146, 121, 11);
-            padding: 10px;
-            color: white;
-        }
-
-        .slideshow-container {
-            display: flex;
-            overflow: hidden;
-            max-width: 1500px;
-            margin: auto;
-            position: relative;
-        }
-
-        .slides-wrapper {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-            width: 300%; /* Adjust based on the number of slides visible at a time */
-        }
-
-        .mySlides {
-            min-width: 33.33%; /* Show three slides at a time */
-            box-sizing: border-box;
-            padding: 20px;
-        }
-
-        .animal-profile {
-            background-color: rgb(146, 121, 11);
-            color: white;
-            padding: 20px;
-            margin: 20px;
-            border-radius: 5px;
-            width: 100%;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .animal-profile img {
-            width: 100%;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
-
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            margin-top: -22px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-            background-color: rgba(0,0,0,0.5);
-        }
-
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
-        }
-
-        .prev:hover, .next:hover {
-            background-color: rgba(0,0,0,0.8);
-        }
-
-        .dot-container {
-            text-align: center;
-            padding: 20px;
-        }
-
-        .dot {
-            cursor: pointer;
-            height: 15px;
-            width: 15px;
-            margin: 0 2px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.6s ease;
-        }
-
-        .active, .dot:hover {
-            background-color: #717171;
-        }
-
-        @media screen and (min-width: 710px) {
-            body {
-                font-size: 25px;
-            }
-        }
-
-        @media screen and (min-width: 1024px) {
-            body {
-                font-size: 27px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="/homestyle.css">
 </head>
 <body>
     <header>
@@ -168,61 +30,61 @@
             <p style="color: white;">Auf dieser Website können Sie den perfekten tierischen Begleiter finden. Sehen Sie sich unsere Kategorien an und entdecken Sie die besten Tiere zur Adoption!</p>
         </section>
         <h2 style="color: white;">Empfohlene Tiere</h2>
-        <div class="slideshow-container">
-            <div class="slides-wrapper">
-                <div class="mySlides">
-                    <div class="animal-profile">
-                        <img src="images/cat1.jpg" alt="Energetic Ella">
-                        <h3>Energetic Ella</h3>
-                        <p>Voller Energie, liebt es zu spielen und braucht viel Bewegung.</p>
+        <div class="slideshow-wrapper">
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <div class="slideshow-container">
+                <div class="slides-wrapper">
+                    <div class="mySlides">
+                        <div class="animal-profile">
+                            <img src="/bilder/hund2.0.jpg" alt="Bild von Aris"> 
+                            <p>Aris ist ein ruhiger und liebevoller Golden Retriever, der gerne kuschelt und ein treuer Begleiter ist. Ideal für ruhige Haushalte</p>
+                            <button onclick="location.href='/tiere/Hund/hund2.html'">Mehr über Aris</button>
+                        </div>
                     </div>
-                </div>
 
-                <div class="mySlides">
-                    <div class="animal-profile">
-                        <img src="images/cat2.jpg" alt="Curious Charlie">
-                        <h3>Curious Charlie</h3>
-                        <p>Neugierig und verspielt, immer auf der Suche nach einem Abenteuer.</p>
+                    <div class="mySlides">
+                        <div class="animal-profile">
+                            <img src="/bilder/cam1.0.jpg" alt="Bild von Charlie">
+                            <p>Charlie ist ein faszinierendes Chamäleon, das seine Farbe je nach Umgebung wechselt. Es benötigt spezielle Pflege und ein Terrarium.</p>
+                            <button onclick="location.href='/tiere/Reptilien/chameleon.html'">Mehr über Charlie</button>
+                        </div>
                     </div>
-                </div>
 
-                <div class="mySlides">
-                    <div class="animal-profile">
-                        <img src="images/cat3.jpg" alt="Lazy Leo">
-                        <h3>Lazy Leo</h3>
-                        <p>Entspannt und kuschelig, liebt es zu faulenzen.</p>
+                    <div class="mySlides">
+                        <div class="animal-profile">
+                            <img src="/bilder/oppo1.0.jpg" alt="Bild von Oskar">
+                            <p>Oscar ist ein neugieriges Opossum, das seine Umgebung gerne erkundet. Ideal für erfahrene Tierhalter, die ihm ein sicheres Zuhause bieten können.</p>
+                            <button onclick="location.href='/tiere/kleintier/opossum.html'">Mehr über Oskar</button>
+                        </div>
                     </div>
-                </div>
 
-                <div class="mySlides">
-                    <div class="animal-profile">
-                        <img src="images/cat4.jpg" alt="Playful Paws">
-                        <h3>Playful Paws</h3>
-                        <p>Liebt es zu spielen und ist sehr freundlich.</p>
+                    <div class="mySlides">
+                        <div class="animal-profile">
+                            <img src="/bilder/bunny1.0.jpg" alt="Bild von Hanni">
+                            <p>Hanni ist ein neugieriger Hase, der gerne durch die Gegend hüpft und frisches Gemüse knabbert. Perfekt für Familien.</p>
+                            <button onclick="location.href='/tiere/kleintier/hase.html'">Mehr über Hanni</button>
+                        </div>
                     </div>
-                </div>
 
-                <div class="mySlides">
-                    <div class="animal-profile">
-                        <img src="images/cat5.jpg" alt="Sleepy Sam">
-                        <h3>Sleepy Sam</h3>
-                        <p>Ruhig und gelassen, perfekt für ein entspanntes Zuhause.</p>
+                    <div class="mySlides">
+                        <div class="animal-profile">
+                            <img src="/bilder/cat4.0.jpg" alt="Bild von Sam">
+                            <p>Sam ist ein liebevoller und verschmuster Kater, der gerne in der Sonne liegt und sich kraulen lässt. Perfekt für ruhige Haushalte.</p>
+                            <button onclick="location.href='/tiere/Katze/cat4.html'">Mehr über Sam</button>
+                        </div>
                     </div>
-                </div>
 
-                <div class="mySlides">
-                    <div class="animal-profile">
-                        <img src="images/cat6.jpg" alt="Friendly Fido">
-                        <h3>Friendly Fido</h3>
-                        <p>Sehr freundlich und liebt Gesellschaft.</p>
+                    <div class="mySlides">
+                        <div class="animal-profile">
+                            <img src="/bilder/hund3.0.jpg" alt="Bild von Fido">
+                            <p> Fido ist ein energie- geladener und verspielter Hund, der lange Spaziergänge und Abenteuer liebt. Er versteht sich gut mit Kindern und anderen Hunden.</p>
+                            <button onclick="location.href='/tiere/Hund/hund3.html'">Mehr über Fido</button>
+                        </div>
                     </div>
                 </div>
             </div>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
-  
-        <!-- Next and previous buttons -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
   
         <!-- The dots/circles -->
         <div class="dot-container">
@@ -231,44 +93,11 @@
             <span class="dot" onclick="currentSlide(3)"></span>
             <span class="dot" onclick="currentSlide(4)"></span>
             <span class="dot" onclick="currentSlide(5)"></span>
-            <span class="dot" onclick="currentSlide(6)"></span>
         </div>
     </main>
     <footer>
         <p>&copy; 2024 Adoptiere ein Tier</p>
     </footer>
-    <script>
-        let slideIndex = 0;
-        const slidesWrapper = document.querySelector('.slides-wrapper');
-        const dots = document.querySelectorAll('.dot');
-        const totalSlides = document.querySelectorAll('.mySlides').length;
-
-        function plusSlides(n) {
-            slideIndex += n;
-            if (slideIndex > totalSlides - 3) {
-                slideIndex = 0;
-            } else if (slideIndex < 0) {
-                slideIndex = totalSlides - 3;
-            }
-            showSlides();
-        }
-
-        function currentSlide(n) {
-            slideIndex = n - 1;
-            showSlides();
-        }
-
-        function showSlides() {
-            slidesWrapper.style.transform = `translateX(-${slideIndex * 35.4}%)`;
-            dots.forEach((dot, index) => {
-                dot.className = dot.className.replace(" active", "");
-                if (index === slideIndex) {
-                    dot.className += " active";
-                }
-            });
-        }
-
-        showSlides();
-    </script>
+    <script src="/homescript.js"></script>
 </body>
 </html>
