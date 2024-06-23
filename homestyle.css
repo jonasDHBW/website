@@ -1,3 +1,4 @@
+/* Allgemeine Stile */
 body {
     font-family: Arial, sans-serif;
     background-image: url("/bilder/wallpaperflare.com_wallpaper.jpg");
@@ -11,12 +12,14 @@ body {
     padding: 20px;
 }
 
+/* Header-Stile */
 header {
     background-color: rgb(146, 121, 11);
     padding: 20px;
     color: white;
 }
 
+/* Navigationsleiste */
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -36,12 +39,14 @@ nav ul li a:hover, nav ul li a.active {
     background-color: rgb(120, 100, 10);
 }
 
+/* Footer-Stile */
 footer {
     background-color: rgb(146, 121, 11);
     padding: 10px;
     color: white;
 }
 
+/* Slideshow-Container */
 .slideshow-container {
     display: flex;
     overflow: hidden;
@@ -50,18 +55,21 @@ footer {
     position: relative;
 }
 
+/* Wrapper für die Folien */
 .slides-wrapper {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    width: 300%; /* Adjust based on the number of slides visible at a time */
+    width: 300%;
 }
 
+/* Einzelne Folien */
 .mySlides {
-    min-width: 33.33%; /* Show three slides at a time */
+    min-width: 33.33%;
     box-sizing: border-box;
     padding: 20px;
 }
 
+/* Stil für die Tierprofile */
 .animal-profile {
     background-color: rgb(146, 121, 11);
     color: white;
@@ -74,12 +82,14 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Stil für die Bilder in den Tierprofilen */
 .animal-profile img {
     width: 100%;
     border-radius: 5px;
     margin-bottom: 10px;
 }
 
+/* Pfeile für die Slideshow */
 .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -98,17 +108,20 @@ footer {
 .next {
     right: 0;
     border-radius: 3px 0 0 3px;
+    color: black;
 }
 
 .prev {
     left: 0;
     border-radius: 3px 0 0 3px;
+    color: black;
 }
 
 .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
 }
 
+/* Dots/Circles für die Slideshow */
 .dot-container {
     text-align: center;
     padding: 20px;
@@ -129,6 +142,7 @@ footer {
     background-color: #717171;
 }
 
+/* Medienabfragen für unterschiedliche Bildschirmgrößen */
 @media screen and (min-width: 710px) {
     body {
         font-size: 25px;
@@ -141,17 +155,17 @@ footer {
     }
 }
 
+/* Stil für den "Mehr"-Button */
 .more-button {
-    background-color: green; /* Hintergrundfarbe */
-    color: white; /* Textfarbe */
-    padding: 15px 32px; /* Innenabstand */
-    font-size: 16px; /* Schriftgröße */
-    border: none; /* Rahmen entfernen */
-    border-radius: 5px; /* Abgerundete Ecken */
-    cursor: pointer; /* Mauszeiger bei Hover */
+    background-color: green;
+    color: white;
+    padding: 15px 32px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .more-button:hover {
-    background-color: darkgreen; /* Hintergrundfarbe bei Hover */
+    background-color: darkgreen;
 }
-
